@@ -1,0 +1,45 @@
+//COLORS
+$clr-primary: #b12c41;
+
+$clr-grey-light:#f7f7f7; 
+$clr-grey-light-1:#eee; 
+$clr-grey-light-2: #A2B3BD;
+$clr-grey-dark: #999;
+$clr-grey-dark-2: #777;
+$clr-grey-dark-3: #1C1C20;
+
+$clr-black : #000;
+$clr-white: #fff;
+
+$bg-dark: #181818;
+$bg-text-color: #1c1c1c;
+
+
+//FONT
+$default-font-size: 1.6rem;
+
+//HR 
+$bg-hr: #E7E7E7;
+
+//GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal:6rem;
+
+//MARGIN
+$margin:(
+    sm: 1rem,
+    md: 2rem,
+    lg: 2.5rem
+);
+
+$margin-default: 1.5rem;
+
+//MEDIA QUEARY 
+$breakpoints: (
+    sm: 600px,
+    md: 900px,
+    lg: 1140px,
+    xl: 1400px
+);

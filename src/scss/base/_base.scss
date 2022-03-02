@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+html {
+  font-size: 62.5%;
+  background-color: $bg-dark;
+  @include respond(lg) {
+    font-size: 58%;
+  }
+  
+  @include respond(md) {
+    font-size: 50%;
+  }
+
+  @include respond(sm) {
+    font-size: 40%;
+  }
+
+  @include respond(xl) {
+    font-size: 75%;
+  }
+}
+
+hr {
+  background-color: $bg-hr;
+  height: 1px;
+  width: 100%;
+}
+
