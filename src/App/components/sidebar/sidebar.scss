@@ -1,0 +1,30 @@
+.sideBar {
+  display: grid;
+  grid-template-rows: minmax(min-content, 10vw) minmax(min-content, 1fr);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 100%;
+  color: black;
+  transform: translateX(0);
+  transform-origin: 0;
+  background-color: white;
+  z-index: 1000;
+  transition: all .4s ;
+
+  &:not(.active) {
+    transform: translateX(100%);
+    width: 0;
+    overflow: hidden;
+  }
+
+  .btn{
+    justify-self: end;
+    align-self: center;
+    &__icon > svg{
+      font-size: 3rem;
+    }
+    
+  }
+}

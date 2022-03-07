@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .u-mb {
   margin-bottom: 2rem !important;
 }
@@ -6,6 +8,15 @@
 }
 .u-mb-xxl {
   margin-bottom: 5rem !important;
+}
+.u-mt {
+  margin-top: 2rem !important;
+}
+.u-mt-xl {
+  margin-top: 3.5rem !important;
+}
+.u-mt-xxl {
+  margin-top: 5rem !important;
 }
 
 .display-none {
@@ -26,5 +37,32 @@
   position: relative;
 }
 
+.circle {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 1rem solid;
+
+  &--red {
+    border-color: $clr-primary;
+  }
+}
 
 
+
+.clr--primary {
+  color: $clr-primary;
+}
+.bg--white {
+  background-color: $clr-white;
+}
+
+//padding container
+.p-2-3 {
+  padding: 2rem 3rem;
+}
+
+.hr-w-80 {
+  width: 80%;
+}

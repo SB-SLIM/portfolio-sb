@@ -34,7 +34,7 @@ $margin:(
     lg: 2.5rem
 );
 
-$margin-default: 1.5rem;
+$margin-default: 3rem;
 
 //MEDIA QUEARY 
 $breakpoints: (
@@ -43,3 +43,11 @@ $breakpoints: (
     lg: 1140px,
     xl: 1400px
 );
+
+
+//HR
+$h-hr: 1px;
+$h-xl-hr: 5px;
+
+
+$default-font-size: 1rem;

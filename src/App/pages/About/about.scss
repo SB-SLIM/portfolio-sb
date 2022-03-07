@@ -1,0 +1,38 @@
+.about {
+  //FIXME: make class container for all pages
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(min-content, 1.75fr) minmax(min-content, 1fr);
+  grid-template-rows:
+    minmax(min-content, 1fr) minmax(min-content, 20vh)
+    minmax(min-content, 1fr);
+
+  .desc {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    &-hello {
+        display: flex;
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      align-items: flex-end;
+    }
+
+    &-im {
+      display: flex;
+      grid-column: 2/-1;
+      grid-row: 2/3;
+      align-items: center;
+    }
+  }
+
+  .btn-container {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+  }
+}

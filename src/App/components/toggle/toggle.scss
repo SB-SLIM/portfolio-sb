@@ -1,0 +1,39 @@
+.toggle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &__container {
+    cursor: pointer;
+  }
+}
+
+.toggle-btn {
+  display: inline-block;
+  width: 2.2rem;
+  height: 0.3rem;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+}
+
+.toggle-btn::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 2.5rem;
+  height: inherit;
+  background-color: white;
+  transform: translateY(-1rem);
+  border-radius: inherit;
+  right: 0;
+}
+.toggle-btn::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: inherit;
+  background-color: white;
+  transform: translateY(1rem);
+  border-radius: inherit;
+  right: 0;
+}

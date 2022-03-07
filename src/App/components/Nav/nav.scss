@@ -1,0 +1,80 @@
+@use "../../../scss/abstracts" as *;
+
+.navBar {
+  width: 10vw;
+  background-color: $bg-dark;
+  box-shadow: 0 1rem 2rem rgba(#000000, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+  }
+
+  &__logo-container {
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    width: 7rem;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .nav {
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 3rem;
+      font-weight: 600;
+      border-right: $bg-dark solid 1rem;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      &:not(:last-child) {
+        margin: $margin-default 0;
+      }
+    }
+
+    &__item:hover,
+    &__item:focus,
+    &__item--active {
+      color: $clr-primary;
+      border-right: $clr-primary solid 1rem;
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__link {
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-bottom: $margin-default;
+      }
+    }
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+    }
+    &__icon:hover {
+      color: $clr-primary;
+    }
+  }
+}

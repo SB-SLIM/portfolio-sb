@@ -3,10 +3,11 @@
 html {
   font-size: 62.5%;
   background-color: $bg-dark;
+
   @include respond(lg) {
     font-size: 58%;
   }
-  
+
   @include respond(md) {
     font-size: 50%;
   }
@@ -20,9 +21,34 @@ html {
   }
 }
 
+body{
+  overflow: hidden;
+}
+body::after {
+  content: "Web Developper";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  max-width: 90vw;
+  color: $bg-text-color;
+  font-size: 20rem;
+  font-weight: 700;
+  line-height: normal;
+  z-index: -200;
+
+  @include respond(xl) {
+    font-size: 25rem;
+  }
+}
+
 hr {
   background-color: $bg-hr;
-  height: 1px;
+  height: $h-hr;
   width: 100%;
 }
 
+.hr--xl {
+  height: $h-xl-hr;
+}
