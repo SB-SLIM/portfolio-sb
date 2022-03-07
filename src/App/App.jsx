@@ -3,6 +3,7 @@ import { Nav, SideBar, Toggle } from "./components";
 import { About, Connect, NotFound, Resume, Works } from "./pages";
 import "./app.scss";
 import { useState } from "react";
+import clsx from "clsx";
 
 function App() {
   const [isAtive, setIsActive] = useState(false);
@@ -11,11 +12,11 @@ function App() {
   };
 
   return (
-    <div className="grid">
+    <div className={clsx("grid", isAtive && "active")}>
       <BrowserRouter>
         <Nav />
         <div className="toggle p-2-3">
-          <Toggle handleClick={handleClick} />
+          <Toggle handleClick={handleClick} show={isAtive} />
         </div>
         <SideBar show={isAtive} setIsActive={setIsActive} />
         <main className="p-2-3">

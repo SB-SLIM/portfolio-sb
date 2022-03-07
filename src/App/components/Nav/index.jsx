@@ -53,7 +53,7 @@ function Nav() {
           <FaLinkedinIn className="social__icon" />
         </a>
         <a
-          href="https://www.linkedin.com/in/slim-bouchoucha/"
+          href="mailto:bouchouchaslim@gmail.com"
           target="_blank"
           rel="noreferrer"
           className="social__link"

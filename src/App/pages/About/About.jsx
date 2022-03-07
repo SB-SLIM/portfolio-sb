@@ -1,4 +1,4 @@
-import { Button, Toggle } from "../../components";
+import { Button } from "../../components";
 import Heading from "../../components/heading/Heading";
 import "./about.scss";
 
@@ -16,8 +16,8 @@ function About() {
       </div>
       <div className="heading-hello">
         <Heading size="bg">
-          HELL
-          <span className="circle circle--red" />,
+          Hell
+          <span className="clr--primary">o</span>,
         </Heading>
       </div>
       <div className="heading-im">
