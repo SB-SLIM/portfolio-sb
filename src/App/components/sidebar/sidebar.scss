@@ -1,16 +1,27 @@
+@use "../../../scss/abstracts" as *;
+
 .sideBar {
+  display: grid;
+  grid-template-columns: minmax(min-content, 30vw);
+  grid-template-rows:  10vw minmax(min-content,calc(100vh - 10vw));
   position: absolute;
   top: 0;
   right: 0;
-  display: grid;
-  grid-template-columns: minmax(min-content, 1fr);
-  grid-template-rows: minmax(min-content, 10vw) minmax(min-content, 1fr);
   color: black;
   background-color: white;
-  width: 30vw;
   height: 100%;
   z-index: 1000;
   transform: translateX(100%);
+
+// &:not(.active){
+//   display: none;
+// }
+
+@include respond(sm) {
+    grid-template-columns: minmax(min-content, 80vw);
+  grid-template-rows:  15vw minmax(min-content,calc(100vh - 10vw));
+
+  }
 
   .btn {
     justify-self: end;
@@ -19,4 +30,7 @@
       font-size: 3rem;
     }
   }
+
+
+  
 }

@@ -13,11 +13,26 @@
   &:not(.active) {
     transform: translateX(0);
   }
+
+  @include respond(sm) {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-rows:  15vw minmax(
+        min-content,
+        calc(100vh - 10vw)
+      );
+
+      transform: translateX(-80vw);
+  }
 }
 
 .toggle {
   grid-column: 2/3;
   grid-row: 1/2;
+
+  @include respond(sm) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
 }
 
 .navBar {
@@ -25,8 +40,8 @@
   top: 0;
   bottom: 0;
   left: 0;
-  
-  @include respond(sm){
+
+  @include respond(sm) {
     display: none;
   }
 }
@@ -34,4 +49,9 @@
 main {
   grid-column: 2/3;
   grid-row: 2/3;
+
+  @include respond(sm) {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
 }
