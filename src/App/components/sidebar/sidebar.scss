@@ -1,10 +1,16 @@
 .sideBar {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: grid;
   grid-template-columns: minmax(min-content, 1fr);
   grid-template-rows: minmax(min-content, 10vw) minmax(min-content, 1fr);
   color: black;
   background-color: white;
+  width: 30vw;
+  height: 100%;
   z-index: 1000;
+  transform: translateX(100%);
 
   .btn {
     justify-self: end;

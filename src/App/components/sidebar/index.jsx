@@ -1,9 +1,10 @@
+import clsx from "clsx";
 import Button from "../button/Button";
 import "./sidebar.scss";
 
 function SideBar({ show, setIsActive }) {
   return (
-    <div className="sideBar">
+    <div className={clsx("sideBar", show && "active")}>
       <Button
         styleProps="btn__icon p-2-3"
         handleClick={() => setIsActive(!show)}
