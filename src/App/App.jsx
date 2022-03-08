@@ -12,12 +12,10 @@ function App() {
   };
 
   return (
-    <div className={clsx("grid", isAtive && "active")}>
-      <BrowserRouter>
-        <Nav />
-        <div className="toggle p-2-3">
-          <Toggle handleClick={handleClick} show={isAtive} />
-        </div>
+    <BrowserRouter>
+      <Nav />
+      <div className={clsx("grid", isAtive && "active")}>
+        <Toggle handleClick={handleClick} show={isAtive} />
         <SideBar show={isAtive} setIsActive={setIsActive} />
         <main className="p-2-3">
           <Routes>
@@ -28,8 +26,8 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
