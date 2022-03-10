@@ -1,3 +1,9 @@
-
-
-
+@keyframes anim-clickBtn {
+    from{
+        transform: translateY(-2px);
+    }
+    to{
+        transform: translate(-1px);
+        color: yellow;
+    }
+}

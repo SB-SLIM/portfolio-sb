@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 import Button from "../button/Button";
 import "./sidebar.scss";
 
@@ -11,11 +12,17 @@ function SideBar({ show, setIsActive }) {
       >
         <span className="btn-close" />
       </Button>
-      <nav>
-        <ul>
-          <li>1</li>
-          <li>Z</li>
-        </ul>
+      <nav className="nav__container">
+        {/* <Link
+          to="/"
+          className={clsx(
+            "nav__item",
+            active === "About" && "nav__item--active"
+          )}
+          onClick={handleClick}
+        >
+          About
+        </Link> */}
       </nav>
     </div>
   );

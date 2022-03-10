@@ -10,6 +10,7 @@
   justify-content: space-between;
   z-index: 100;
 
+
   &__left {
     display: flex;
     flex-direction: column;
@@ -17,17 +18,8 @@
     width: inherit;
   }
 
-  &__logo-container {
-    height: 10vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo {
-    width: 7rem;
-    height: auto;
-    border-radius: 50%;
-  }
+  
+  
 
   .nav {
     &__container {
@@ -46,6 +38,9 @@
       border-right: $bg-dark solid 1rem;
       writing-mode: vertical-lr;
       transform: rotate(180deg);
+      
+
+
       &:not(:last-child) {
         margin: $margin-default 0;
       }
@@ -77,5 +72,31 @@
     &__icon:hover {
       color: $clr-primary;
     }
+  }
+}
+
+.logo-container {
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+// Top Nav
+
+.navTop{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__logo{
+    display: none;
+  }
+
+  @include respond(sm){
+    justify-content: space-between;
+    &__logo{
+    display: inline-block;
+  }
   }
 }

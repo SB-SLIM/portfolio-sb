@@ -16,16 +16,16 @@
 
   @include respond(sm) {
     grid-template-columns: minmax(min-content, 1fr);
-    grid-template-rows:  15vw minmax(
+    grid-template-rows:  15vh minmax(
         min-content,
-        calc(100vh - 10vw)
+        calc(100vh - 15vh)
       );
 
       transform: translateX(-80vw);
   }
 }
 
-.toggle {
+.navTop {
   grid-column: 2/3;
   grid-row: 1/2;
 

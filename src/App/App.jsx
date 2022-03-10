@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Nav, SideBar, Toggle } from "./components";
+import { NavBar, NavTop, SideBar, Toggle } from "./components";
 import { About, Connect, NotFound, Resume, Works } from "./pages";
 import "./app.scss";
 import { useState } from "react";
@@ -13,9 +13,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Nav />
+      <NavBar />
       <div className={clsx("grid", isAtive && "active")}>
-        <Toggle handleClick={handleClick} show={isAtive} />
+        <NavTop handleClick={handleClick} show={isAtive} />
         <SideBar show={isAtive} setIsActive={setIsActive} />
         <main className="p-2-3">
           <Routes>
