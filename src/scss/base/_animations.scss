@@ -1,9 +1,10 @@
-@keyframes anim-clickBtn {
+@keyframes anim-page {
     from{
-        transform: translateY(-2px);
+        opacity: 0;
+        transform: translate(100%);
     }
     to{
-        transform: translate(-1px);
-        color: yellow;
+        opacity: 1;
+        transform: translate(0);
     }
 }
