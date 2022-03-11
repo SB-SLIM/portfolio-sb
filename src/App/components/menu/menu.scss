@@ -1,0 +1,65 @@
+@use "../../../scss/abstracts" as *;
+
+.navBar {
+  width: 10vw;
+  background-color: $bg-dark;
+  box-shadow: 0 1rem 2rem rgba(#000000, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__link {
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-bottom: $margin-default;
+      }
+    }
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+    }
+    &__icon:hover {
+      color: $clr-primary;
+    }
+  }
+}
+
+.logo-container {
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Top Nav
+
+.navTop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__logo {
+    display: none;
+  }
+
+  @include respond(sm) {
+    justify-content: space-between;
+    &__logo {
+      display: inline-block;
+    }
+  }
+}

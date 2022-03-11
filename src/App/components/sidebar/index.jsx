@@ -1,29 +1,22 @@
 import clsx from "clsx";
-import { Link } from "react-router-dom";
+import { useNavContext } from "../../context/nav.context";
+import { dataSideBarMenu } from "../../data/menu.data";
 import Button from "../button/Button";
+import { NavBar } from "../Nav";
 import "./sidebar.scss";
 
-function SideBar({ show, setIsActive }) {
+function SideBar() {
+  const { sideIsOpen, setSideIsOpen } = useNavContext();
+
   return (
-    <div className={clsx("sideBar", show && "active")}>
+    <div className={clsx("sideBar", sideIsOpen && "active")}>
       <Button
         styleProps="btn__icon p-2-3"
-        handleClick={() => setIsActive(!show)}
+        handleClick={() => setSideIsOpen(!sideIsOpen)}
       >
         <span className="btn-close" />
       </Button>
-      <nav className="nav__container">
-        {/* <Link
-          to="/"
-          className={clsx(
-            "nav__item",
-            active === "About" && "nav__item--active"
-          )}
-          onClick={handleClick}
-        >
-          About
-        </Link> */}
-      </nav>
+      <NavBar data={dataSideBarMenu} />
     </div>
   );
 }

@@ -15,4 +15,5 @@ function Heading({ size, children, styleProps: style }) {
 Heading.prototype = {
   size: "sm" || "md" || "bg",
 };
+
 export default Heading;

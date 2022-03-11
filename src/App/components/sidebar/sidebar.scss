@@ -3,7 +3,7 @@
 .sideBar {
   display: grid;
   grid-template-columns: minmax(min-content, 30vw);
-  grid-template-rows:  10vw minmax(min-content,calc(100vh - 10vw));
+  grid-template-rows: 15vh 85vh;
   position: absolute;
   top: 0;
   right: 0;
@@ -13,14 +13,12 @@
   z-index: 1000;
   transform: translateX(100%);
 
-// &:not(.active){
-//   display: none;
-// }
+  // &:not(.active){
+  //   display: none;
+  // }
 
-@include respond(sm) {
-    grid-template-columns: minmax(min-content, 80vw);
-  grid-template-rows:  15vh minmax(min-content,calc(100vh - 15vh));
-
+  @include respond(sm) {
+    grid-template-columns: 80vw;
   }
 
   .btn {
@@ -30,7 +28,4 @@
       font-size: 3rem;
     }
   }
-
-
-  
 }

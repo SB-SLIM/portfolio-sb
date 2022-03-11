@@ -49,8 +49,6 @@
   }
 }
 
-
-
 .clr--primary {
   color: $clr-primary;
 }
@@ -67,10 +65,14 @@
   width: 80%;
 }
 
-.d-none{
+.d-none {
   display: none;
 }
 
-.clr--primary{
+.clr--primary {
   color: $clr-primary;
+}
+
+.fd--column {
+  flex-direction: column;
 }

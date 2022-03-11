@@ -1,102 +1,49 @@
 @use "../../../scss/abstracts" as *;
 
-.navBar {
-  width: 10vw;
-  background-color: $bg-dark;
-  box-shadow: 0 1rem 2rem rgba(#000000, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 100;
-
-
-  &__left {
+.nav {
+  &__container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: inherit;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  
-  
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    position: relative;
 
-  .nav {
-    &__container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    &--bar {
+      background-color: inherit;
+      width: 1rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
-    &__item {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      font-size: 3rem;
-      font-weight: 600;
-      border-right: $bg-dark solid 1rem;
+    &--vertical {
       writing-mode: vertical-lr;
       transform: rotate(180deg);
-      
-
 
       &:not(:last-child) {
         margin: $margin-default 0;
       }
     }
-
-    &__item:hover,
-    &__item:focus,
-    &__item--active {
-      color: $clr-primary;
-      border-right: $clr-primary solid 1rem;
-    }
   }
 
-  .social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    &__link {
-      cursor: pointer;
-      &:not(:last-child) {
-        margin-bottom: $margin-default;
-      }
-    }
-    &__icon {
-      width: 4rem;
-      height: 4rem;
-    }
-    &__icon:hover {
-      color: $clr-primary;
-    }
+  &__item:hover,
+  &__item:focus,
+  &__item--active {
+    color: $clr-primary;
   }
-}
-
-.logo-container {
-    height: 10vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-// Top Nav
-
-.navTop{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  &__logo{
-    display: none;
-  }
-
-  @include respond(sm){
-    justify-content: space-between;
-    &__logo{
-    display: inline-block;
-  }
+  &__item:hover &__item--bar,
+  &__item:focus &__item--bar,
+  &__item--active &__item--bar {
+    background-color: $clr-primary;
   }
 }

@@ -1,25 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { NavBar, NavTop, SideBar, Toggle } from "./components";
+import { MenuLeft, MenuTop, NavBar, SideBar } from "./components";
 import { About, Connect, NotFound, Resume, Works } from "./pages";
 import "./app.scss";
 import { useState } from "react";
 import clsx from "clsx";
+import { useNavContext } from "./context/nav.context";
 
 function App() {
-  const [isAtive, setIsActive] = useState(false);
-  const handleClick = () => {
-    setIsActive(!isAtive);
-  };
+  const { sideIsOpen } = useNavContext();
 
   return (
     <BrowserRouter>
-      <NavBar />
-      <div className={clsx("grid", isAtive && "active")}>
-        <NavTop handleClick={handleClick} show={isAtive} />
-        <SideBar show={isAtive} setIsActive={setIsActive} />
+      <MenuLeft />
+      <div className={clsx("grid", sideIsOpen && "active")}>
+        <MenuTop />
+        <SideBar />
         <main className="p-2-3">
           <Routes>
-            <Route path="/" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/connect" element={<Connect />} />
             <Route path="/works" element={<Works />} />

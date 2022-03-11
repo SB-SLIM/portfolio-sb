@@ -3,10 +3,7 @@
 .grid {
   display: grid;
   grid-template-columns: minmax(min-content, 10vw) minmax(min-content, 1fr);
-  grid-template-rows: minmax(min-content, 10vw) minmax(
-      min-content,
-      calc(100vh - 10vw)
-    );
+  grid-template-rows: 15vh 85vh;
   transform: translateX(-30vw);
   transition: all 0.7s ease-in;
 
@@ -16,10 +13,7 @@
 
   @include respond(sm) {
     grid-template-columns: minmax(min-content, 1fr);
-    grid-template-rows:  15vh minmax(
-        min-content,
-        calc(100vh - 15vh)
-      );
+    
 
       transform: translateX(-80vw);
   }

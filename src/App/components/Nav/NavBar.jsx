@@ -1,69 +1,40 @@
-import { Link, Outlet } from "react-router-dom";
-import "./nav.scss";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
-import { useState } from "react";
 import clsx from "clsx";
-import Logo from "../Logo";
+import { Link } from "react-router-dom";
+import { useNavContext } from "../../context/nav.context";
+import "./nav.scss";
 
-function NavBar() {
-  const [active, setActive] = useState("About");
+function Nav({ data, classes, isVertical = false }) {
+  const { activePage, setActivePage, setSideIsOpen, sideIsOpen } =
+    useNavContext();
 
-  const handleClick = (e) => {
-    const target = e.target.textContent;
-    setActive(target);
+  const handleClick = (p) => {
+    setActivePage(p);
+    if (sideIsOpen) {
+      setSideIsOpen(false);
+    }
   };
 
   return (
-    <div className="navBar p-2-3">
-      <div className="navBar__left">
-        <div className="logo-container">
-          <Logo />
-        </div>
-        <nav className="nav__container">
+    <nav className="fd--column nav__container">
+      {data.map((p, index) => {
+        return (
           <Link
-            to="/"
+            key={index}
+            to={p}
             className={clsx(
               "nav__item",
-              active === "About" && "nav__item--active"
+              activePage === p && "nav__item--active",
+              isVertical && "nav__item--vertical"
             )}
-            onClick={handleClick}
+            onClick={() => handleClick(p)}
           >
-            About
+            {p}
+            <span className="nav__item--bar" />
           </Link>
-          <Link
-            to="resume"
-            className={clsx(
-              "nav__item",
-              active === "Resume" && "nav__item--active"
-            )}
-            onClick={handleClick}
-          >
-            Resume
-          </Link>
-        </nav>
-      </div>
-      <div className="social">
-        <a
-          href="https://www.linkedin.com/in/slim-bouchoucha/"
-          target="_blank"
-          rel="noreferrer"
-          className="social__link"
-        >
-          <FaLinkedinIn className="social__icon" />
-        </a>
-        <a
-          href="mailto:bouchouchaslim@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-          className="social__link"
-        >
-          <FiMail className="social__icon" />
-        </a>
-      </div>
-      <Outlet />
-    </div>
+        );
+      })}
+    </nav>
   );
 }
 
-export default NavBar;
+export default Nav;
