@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
-import { Heading } from "../../components";
+import { Typography } from "../../components";
 import "./notFound.scss";
 
 function NotFound() {
   return (
-    <div className="notFound">
+    <main className="notFound">
       <div className="notFound__title">
-        <Heading size="bg">that page doesn't exist!</Heading>
-        <p>Sorry, the page you were looking for could not be found.</p>
+        <Typography variant="h1">that page doesn't exist!</Typography>
+        <Typography>
+          Sorry, the page you were looking for could not be found.
+        </Typography>
       </div>
       <div className="notFound__body">
-        <p>
-          You can return to ou <Link to="About">home page</Link>
-        </p>
+        <Typography>
+          You can return to our <Link to="About">home page</Link>
+        </Typography>
       </div>
-    </div>
+    </main>
   );
 }
 

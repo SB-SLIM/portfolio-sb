@@ -6,7 +6,7 @@ function Button({ styleProps: style, children, handleClick, ...rest }) {
     <button
       type="submit"
       onClick={handleClick}
-      className={clsx("btn", style && `${style}`)}
+      className={clsx("btn fs-300", style && `${style}`)}
     >
       {children}
     </button>

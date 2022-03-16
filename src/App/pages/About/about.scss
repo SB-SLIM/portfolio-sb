@@ -1,12 +1,12 @@
+@use "../../../scss/abstracts" as *;
+
 .about {
-  //FIXME: make class container for all pages
-  height: 100%;
-  display: grid;
+  min-height: 100%;
   grid-template-columns: minmax(min-content, 1.75fr) minmax(min-content, 1fr);
   grid-template-rows:
     minmax(min-content, 1fr) minmax(min-content, 20vh)
     minmax(min-content, 1fr);
-animation: anim-page 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    
 
   .desc {
     display: flex;

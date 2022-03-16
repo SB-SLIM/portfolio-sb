@@ -5,7 +5,7 @@ import "./menu.scss";
 
 function MenuTop({ handleClick, isAtive }) {
   return (
-    <div className="navTop p-2-3">
+    <div className="navTop ">
       <div className="logo-container navTop__logo">
         <Logo />
       </div>

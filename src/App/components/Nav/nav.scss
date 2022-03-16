@@ -1,6 +1,7 @@
 @use "../../../scss/abstracts" as *;
 
 .nav {
+  
   &__container {
     display: flex;
     justify-content: flex-start;
@@ -13,37 +14,21 @@
     justify-content: flex-end;
     padding: 1rem 1.5rem;
     width: 100%;
-    font-size: 3rem;
     font-weight: 600;
     position: relative;
 
-    &--bar {
-      background-color: inherit;
-      width: 1rem;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    
 
     &--vertical {
       writing-mode: vertical-lr;
       transform: rotate(180deg);
-
-      &:not(:last-child) {
-        margin: $margin-default 0;
-      }
     }
   }
 
   &__item:hover,
   &__item:focus,
-  &__item--active {
+  &__item.active {
     color: $clr-primary;
   }
-  &__item:hover &__item--bar,
-  &__item:focus &__item--bar,
-  &__item--active &__item--bar {
-    background-color: $clr-primary;
-  }
+  
 }

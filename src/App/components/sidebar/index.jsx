@@ -9,9 +9,9 @@ function SideBar() {
   const { sideIsOpen, setSideIsOpen } = useNavContext();
 
   return (
-    <div className={clsx("sideBar", sideIsOpen && "active")}>
+    <div className={clsx("sideBar", sideIsOpen && "show")}>
       <Button
-        styleProps="btn__icon p-2-3"
+        styleProps="btn__icon"
         handleClick={() => setSideIsOpen(!sideIsOpen)}
       >
         <span className="btn-close" />

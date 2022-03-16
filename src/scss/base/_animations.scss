@@ -1,10 +1,23 @@
-@keyframes anim-page {
-    from{
-        opacity: 0;
-        transform: translate(100%);
-    }
-    to{
-        opacity: 1;
-        transform: translate(0);
-    }
+@keyframes animPage--open {
+  from {
+    opacity: 0;
+    transform: translate(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
+
+@keyframes animPage--close{
+from {
+    opacity: 1;
+    transform: translate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-100%);
+    
+  }
+}
+

@@ -1,32 +1,32 @@
-import { Button } from "../../components";
-import Heading from "../../components/heading/Heading";
+import { Button, Typography } from "../../components";
+
 import "./about.scss";
 
 function About() {
   return (
-    <div className="about">
+    <main className="grid about">
       <div className="desc">
-        <Heading size="sm" styleProps="clr--primary u-mb">
+        <Typography variant="h1" styleProps="clr--primary u-mb">
           interaction design works
-        </Heading>
+        </Typography>
         <hr className="bg--white hr--xl hr-w-80" />
-        <Heading size="sm" styleProps="u-mt">
+        <Typography size="h1" styleProps="u-mt">
           graphic designs works
-        </Heading>
+        </Typography>
       </div>
       <div className="heading-hello">
-        <Heading size="bg">
+        <Typography styleProps="fs-900">
           Hell
           <span className="clr--primary">o</span>,
-        </Heading>
+        </Typography>
       </div>
       <div className="heading-im">
-        <Heading size="md">I am slim</Heading>
+        <Typography styleProps="fs-800">I am slim</Typography>
       </div>
       <div className="btn-container">
         <Button styleProps="btn--primary">Hire me!</Button>
       </div>
-    </div>
+    </main>
   );
 }
 

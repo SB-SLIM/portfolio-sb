@@ -1,11 +1,12 @@
 @use "./variables" as *;
+
 @use "sass:map";
 
 @mixin clearfix() {
   &::after {
-    display: block;
-    clear: both;
     content: "";
+    clear: both;
+    display: table;
   }
 }
 
@@ -21,4 +22,28 @@
       @content;
     }
   }
+}
+
+@mixin media-down($breakpoint) {
+  $size: map.get($breakpoints, $breakpoint);
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+@mixin media-up($breakpoint) {
+  $size: map.get($breakpoints, $breakpoint);
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin anim-page--open {
+  animation: animPage--open 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+@mixin anim-page--close {
+  animation: animPage--close 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+@mixin openSidebar{
+  animation: openSidebar 0.8s ;
 }

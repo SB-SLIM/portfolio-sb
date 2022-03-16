@@ -1,23 +1,97 @@
 @use "../abstracts" as *;
 
-.u-mb {
-  margin-bottom: 2rem !important;
+
+//Container
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem)
 }
-.u-mb-xl {
-  margin-bottom: 3.5rem !important;
+
+.grid{
+  display: grid;
+  gap: var(--gap, 1rem)
 }
-.u-mb-xxl {
-  margin-bottom: 5rem !important;
+
+.flow > *:where(:not(:first-child))  { 
+  margin-top: var(--flow-space, $my)
 }
-.u-mt {
-  margin-top: 2rem !important;
+
+.flow--space-sm {
+    --flow-space: .75rem;
 }
-.u-mt-xl {
-  margin-top: 3.5rem !important;
+.flow--space-xl {
+    --flow-space: 2rem;
 }
-.u-mt-xxl {
-  margin-top: 5rem !important;
+
+.container{
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 128rem; 
 }
+
+
+/************/
+/*  -START- */
+/*  Margin  */
+/************/
+
+//margin-left
+.ml{
+margin-left: $mx;
+}
+
+.ml-sm{
+margin-left: $mx-sm;
+}
+
+.ml-xl{
+margin-left: $mx-xl;
+}
+
+//margin-right
+.mr{
+margin-right: $mx;
+}
+
+.mr-sm{
+margin-right: $mx-sm;
+}
+
+.mr-xl{
+margin-right: $mx-xl;
+}
+
+//margin-top
+.mt{
+  margin-top: $my;
+}
+
+.mt-sm{
+  margin-top: $my-sm;
+}
+
+.mt-xl{
+  margin-top: $my-xl;
+}
+
+//margin-bottom
+.mb{
+  margin-bottom: $my;
+}
+
+.mb-sm{
+  margin-bottom: $my-sm;
+}
+
+.mb-xl{
+  margin-bottom: $my-xl;
+}
+
+/************/
+/*  Margin  */
+/*  -END-   */
+/************/
+
 
 .display-none {
   display: none !important;
@@ -75,4 +149,18 @@
 
 .fd--column {
   flex-direction: column;
+}
+
+.underline-indicators > * {
+  border: 0;
+  border-right: 1rem solid rgba($clr-primary, 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: rgba($clr-primary, .5);
+}
+
+.underline-indicators > .active {
+  border-color: rgba($clr-primary, 1);
 }

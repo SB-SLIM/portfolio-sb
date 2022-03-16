@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import "./resume.scss";
 
 function Resume() {
-  return <div>resume</div>;
+  return <main>resume</main>;
 }
 
 export default Resume;

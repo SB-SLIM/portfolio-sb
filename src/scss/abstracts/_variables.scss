@@ -1,53 +1,133 @@
 //COLORS
-$clr-primary: #b12c41;
+// scss-docs-start gray-color-variables
+$clr-white: #fff;
+$clr-gray-100: #f8f9fa;
+$clr-gray-200: #e9ecef;
+$clr-gray-300: #dee2e6;
+$clr-gray-400: #ced4da;
+$clr-gray-500: #adb5bd;
+$clr-gray-600: #6c757d;
+$clr-gray-700: #495057;
+$clr-gray-800: #343a40;
+$clr-gray-900: #212529;
+$clr-black: #000;
+// scss-docs-end gray-color-variables
 
-$clr-grey-light:#f7f7f7; 
-$clr-grey-light-1:#eee; 
-$clr-grey-light-2: #A2B3BD;
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $clr-gray-100,
+  "200": $clr-gray-200,
+  "300": $clr-gray-300,
+  "400": $clr-gray-400,
+  "500": $clr-gray-500,
+  "600": $clr-gray-600,
+  "700": $clr-gray-700,
+  "800": $clr-gray-800,
+  "900": $clr-gray-900,
+);
+
+$clr-rose-rouge: #b12c41;
+$clr-red: #dc3545;
+$clr-yellow: #ffc107;
+$clr-green: #198754;
+$clr-cyan: #0dcaf0;
+
+$colors: (
+  "clr-rose-rouge": $clr-rose-rouge,
+  "clr-red": $clr-red,
+  "clr-yellow": $clr-yellow,
+  "clr-green": $clr-green,
+  "clr-cyan": $clr-cyan,
+  "clr-white": $clr-white,
+  "clr-gray": $clr-gray-600,
+  "clr-gray-dark": $clr-gray-800,
+);
+
+$primary: $clr-rose-rouge;
+$secondary: $clr-gray-600;
+$success: $clr-green;
+$info: $clr-cyan;
+$warning: $clr-yellow;
+$danger: $clr-red;
+$light: $clr-gray-100;
+$dark: $clr-gray-900;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$clr-primary: #b12c41;
+$clr-grey-light: #f7f7f7;
+$clr-grey-light-1: #eee;
+$clr-grey-light-2: #a2b3bd;
 $clr-grey-dark: #999;
 $clr-grey-dark-2: #777;
-$clr-grey-dark-3: #1C1C20;
-
-$clr-black : #000;
-$clr-white: #fff;
+$clr-grey-dark-3: #1c1c20;
 
 $bg-dark: #181818;
 $bg-text-color: #1c1c1c;
 
+//FONT Size
+$fs-default: 62.5%; // 10px; (10px / 16px)= 62.5%
 
-//FONT
-$default-font-size: 1.6rem;
+$fs--900: clamp(5rem, 8vw + 1rem, 8rem);
+$fs--800: 3.5rem; // = 35px
+$fs--700: 2.5rem; // = 25px
+$fs--600: 2rem;   // = 20px
+$fs--500: 1.8rem; // = 18px
+$fs--400: 1.6rem; // = 16px
+$fs--300: 1.4rem; // = 14px
+$fs--200: 1rem;   // = 10px
 
-//HR 
-$bg-hr: #E7E7E7;
+$fw-light: 300;
+$fw-normal: 400;
+$fw-bold: 700;
+
+$lh-base: 1.5;
+$lh-sm: 1.25;
+$lh-lg: 2;
+
+/* font-families */
+    $ff-serif: "Bellefair", serif;
+    $ff-sans-normal: "Inter", sans-serif;
 
 //GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
-$gutter-horizontal:6rem;
+$gutter-horizontal: 6rem;
 
 //MARGIN
-$margin:(
-    sm: 1rem,
-    md: 2rem,
-    lg: 2.5rem
-);
+$mx: 1.5rem;
+$mx-sm: 1rem;
+$mx-xl: 2rem;
+$my: 1rem;
+$my-sm: .75rem;
+$my-xl: 1.5rem;
 
 $margin-default: 3rem;
 
-//MEDIA QUEARY 
+//MEDIA QUEARY
 $breakpoints: (
-    sm: 600px,
-    md: 900px,
-    lg: 1140px,
-    xl: 1400px
+  sm: 600px,
+  md: 900px,
+  lg: 1140px,
+  xl: 1400px,
 );
 
-
 //HR
+$bg-hr: #e7e7e7;
 $h-hr: 1px;
 $h-xl-hr: 5px;
 
 
-$default-font-size: 1rem;
+// Button
+$btn-border-radius: 50px;
+

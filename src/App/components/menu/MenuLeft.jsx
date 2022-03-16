@@ -8,14 +8,14 @@ import { dataLeftMenu } from "../../data/menu.data";
 
 function MenuLeft() {
   return (
-    <div className="navBar p-2-3">
+    <div className="navBar ">
       <div className="navBar__left">
         <div className="logo-container">
           <Logo />
         </div>
         <NavBar data={dataLeftMenu} isVertical />
       </div>
-      <div className="social">
+      <div className="social flow flow--space-xl">
         <a
           href="https://www.linkedin.com/in/slim-bouchoucha/"
           target="_blank"

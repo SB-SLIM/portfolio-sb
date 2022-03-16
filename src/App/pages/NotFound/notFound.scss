@@ -6,8 +6,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-  animation: anim-page 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  
+
   &__title {
     text-align: center;
   }
@@ -18,8 +17,8 @@
       display: inline-block;
       color: $clr-primary;
       &:hover {
-        transform: translate(2px) scale(1.1) ;
-        transition: all .4s;
+        transform: translate(2px) scale(1.1);
+        transition: all 0.4s;
       }
     }
   }

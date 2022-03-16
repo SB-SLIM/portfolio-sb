@@ -15,7 +15,7 @@ function Nav({ data, classes, isVertical = false }) {
   };
 
   return (
-    <nav className="fd--column nav__container">
+    <nav className="flow flow--space-xl fs-600 underline-indicators fd--column nav__container">
       {data.map((p, index) => {
         return (
           <Link
@@ -23,13 +23,12 @@ function Nav({ data, classes, isVertical = false }) {
             to={p}
             className={clsx(
               "nav__item",
-              activePage === p && "nav__item--active",
+              activePage === p && "active",
               isVertical && "nav__item--vertical"
             )}
             onClick={() => handleClick(p)}
           >
             {p}
-            <span className="nav__item--bar" />
           </Link>
         );
       })}
