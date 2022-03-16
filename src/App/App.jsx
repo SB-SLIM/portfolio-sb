@@ -1,6 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { MenuLeft, MenuTop, SideBar } from "./components";
-import { About, Connect, DesignSystem, NotFound, Resume, Works } from "./pages";
+import {
+  About,
+  Connect,
+  DesignSystem,
+  NotFound,
+  Resume,
+  Works,
+  Home,
+} from "./pages";
 import "./app.scss";
 
 function App() {
@@ -10,6 +18,7 @@ function App() {
       <SideBar />
       <MenuTop />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/connect" element={<Connect />} />

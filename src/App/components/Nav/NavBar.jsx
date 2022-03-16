@@ -17,10 +17,11 @@ function Nav({ data, classes, isVertical = false }) {
   return (
     <nav className="flow flow--space-xl fs-600 underline-indicators fd--column nav__container">
       {data.map((p, index) => {
+        
         return (
           <Link
             key={index}
-            to={p}
+            to={p === "Home" ? "" : p}
             className={clsx(
               "nav__item",
               activePage === p && "active",

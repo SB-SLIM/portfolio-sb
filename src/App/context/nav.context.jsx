@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const NavContext = createContext();
 
 export const NavProvider = ({ children }) => {
-  const [activePage, setActivePage] = useState("About");
+  const [activePage, setActivePage] = useState("Home");
   const [sideIsOpen, setSideIsOpen] = useState(false);
 
   return (
