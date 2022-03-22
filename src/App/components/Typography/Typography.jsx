@@ -11,22 +11,22 @@ const variants = {
   H7: "p",
 };
 
-function Typography({ children, styleProps: style, variant }) {
+function Typography({ children, styleProps: styles, variant }) {
   switch (variant) {
     case variants.H1:
-      return <h1 className={clsx(style && `${style}`)}>{children}</h1>;
+      return <h1 className={clsx(styles && `${styles}`)}>{children}</h1>;
     case variants.H2:
-      return <h2 className={clsx(style && `${style}`)}>{children}</h2>;
+      return <h2 className={clsx(styles && `${styles}`)}>{children}</h2>;
     case variants.H3:
-      return <h3 className={clsx(style && `${style}`)}>{children}</h3>;
+      return <h3 className={clsx(styles && `${styles}`)}>{children}</h3>;
     case variants.H4:
-      return <h4 className={clsx(style && `${style}`)}>{children}</h4>;
+      return <h4 className={clsx(styles && `${styles}`)}>{children}</h4>;
     case variants.H5:
-      return <h5 className={clsx(style && `${style}`)}>{children}</h5>;
+      return <h5 className={clsx(styles && `${styles}`)}>{children}</h5>;
     case variants.H6:
-      return <h6 className={clsx(style && `${style}`)}>{children}</h6>;
+      return <h6 className={clsx(styles && `${styles}`)}>{children}</h6>;
     default:
-      return <p className={clsx(style && `${style}`)}>{children}</p>;
+      return <p className={clsx(styles && `${styles}`)}>{children}</p>;
   }
 }
 

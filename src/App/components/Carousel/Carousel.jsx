@@ -43,6 +43,7 @@ function Carousel() {
           } = item;
           return (
             <div
+              key={index}
               className={clsx(
                 "carousel-item",
                 state === index
@@ -51,7 +52,7 @@ function Carousel() {
                   ? "carousel-item--prev"
                   : "carousel-item--next"
               )}
-              key={index}
+              
             >
               <img src={sm} alt={name} />
             </div>
@@ -63,6 +64,7 @@ function Carousel() {
           return (
             <button
               type="button"
+              key={index}
               data-target="#carouselComponent"
               data-slide-to={index}
               aria-current={clsx(state === index ? "true" : "false")}
