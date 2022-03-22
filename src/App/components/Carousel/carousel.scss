@@ -3,7 +3,6 @@
 .carousel {
   display: block;
   text-align: center;
-  
 
   &-inner {
     display: grid;
@@ -15,12 +14,12 @@
   &-item {
     height: 100%;
     transition: all 0.4s ease-in;
-    
+
     &--active {
       grid-column: 2/3;
       grid-row: 1/2;
-      order:2;
-      
+      order: 2;
+
       img {
         transform: scale(1);
       }
@@ -29,7 +28,7 @@
     &--next {
       grid-column: 3/4;
       grid-row: 1/2;
-order:3;
+      order: 3;
       img {
         transform: scale(0.8);
       }
@@ -37,7 +36,7 @@ order:3;
     &--prev {
       grid-column: 1/2;
       grid-row: 1/2;
-      order:1;
+      order: 1;
       img {
         transform: scale(0.8);
       }
@@ -59,19 +58,22 @@ order:3;
     position: absolute;
     cursor: pointer;
     top: 50%;
-    transform: translateY(-50%);
-    
     width: 0;
+    height: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
     z-index: 1;
-    transition: width .4s ease;
+    transform-origin: center;
+    
+    transition: width 0.4s ease;
+    
 
     svg {
       color: white;
       padding: 0.5rem;
-      width: 10rem;
-      height: 10rem;
+      width: 6rem;
+      height: 6rem;
     }
-
   }
   .next {
     right: 3%;
@@ -82,15 +84,17 @@ order:3;
 
   &:hover .next,
   &:hover .prev {
-    width: 5rem;
+    width: 6rem;
+    height: 6rem;
     background-color: rgba($clr-black, 0.4);
   }
-  &:hover .prev:disabled, &:hover .next:disabled{
+  &:hover .prev:disabled,
+  &:hover .next:disabled {
     background-color: rgba($clr-black, 0.2);
 
-     svg {
-       color: rgba($clr-white, .4);
-     }
+    svg {
+      color: rgba($clr-white, 0.4);
+    }
   }
 }
 .carousel-indicators {
