@@ -64,9 +64,14 @@
     transform: translateY(-50%);
     z-index: 1;
     transform-origin: center;
-    
+
     transition: width 0.4s ease;
-    
+
+    @media (hover: none) and (pointer: coarse) {
+      width: 6rem;
+      height: 6rem;
+      background-color: rgba($clr-black, 0.4);
+    }
 
     svg {
       color: white;
