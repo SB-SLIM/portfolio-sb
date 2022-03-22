@@ -1,15 +1,18 @@
+import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { MenuLeft, MenuTop, SideBar } from "./components";
 import {
-  About,
   Connect,
   DesignSystem,
   NotFound,
   Resume,
-  Works,
   Home,
+  About,
+  Works,
 } from "./pages";
 import "./app.scss";
+// todo: const About = React.lazy(() => import("./pages/About/About"));
+// todo: const Works = React.lazy(() => import("./pages/Works"));
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
       <MenuLeft />
       <SideBar />
       <MenuTop />
+      {/* <Suspense fallback={<div>SB is loading</div>}> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -26,6 +30,7 @@ function App() {
         <Route path="/designsystem" element={<DesignSystem />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      {/* </Suspense> */}
     </div>
   );
 }

@@ -17,6 +17,7 @@ body::after {
   align-self: center;
   width: min-content;
   max-width: 100vw;
+  max-height: 100vh;
   color: $bg-text-color;
   font-size: 18rem;
   font-weight: 700;

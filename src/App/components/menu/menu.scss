@@ -1,7 +1,7 @@
 @use "../../../scss/abstracts" as *;
 
 .navBar {
-  width: 10vw;
+  width: 100%;
   background-color: $bg-dark;
   box-shadow: 0 1rem 2rem rgba(#000000, 1);
   display: flex;
@@ -29,15 +29,18 @@
     &__icon {
       width: 4rem;
       height: 4rem;
+      
     }
     &__icon:hover {
       color: $clr-primary;
     }
   }
+
+  
 }
 
 .logo-container {
-  height: 10vw;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,15 +52,18 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-right: $py-xl;
 
   &__logo {
     display: none;
   }
 
-  @include respond(sm) {
+  @include media-down(md) {
     justify-content: space-between;
+    padding-right: 0;
+    
     &__logo {
-      display: inline-block;
+      display: flex;
     }
   }
 }

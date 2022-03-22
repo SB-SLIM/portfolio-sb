@@ -112,9 +112,17 @@ $my: 1rem;
 $my-sm: .75rem;
 $my-xl: 1.5rem;
 
-$margin-default: 3rem;
+//Padding
+$px: 1.5rem;
+$px-sm: 1rem;
+$px-xl: 2rem;
+$py: 1rem;
+$py-sm: .75rem;
+$py-xl: 1.5rem;
 
-//MEDIA QUEARY
+
+
+//MEDIA QUERY
 $breakpoints: (
   sm: 600px,
   md: 900px,

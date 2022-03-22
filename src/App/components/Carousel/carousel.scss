@@ -1,0 +1,119 @@
+@use "../../../scss/abstracts" as *;
+
+.carousel {
+  display: block;
+  text-align: center;
+  
+
+  &-inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    position: relative;
+    transition: all 4s ease-in;
+  }
+
+  &-item {
+    height: 100%;
+    transition: all 0.4s ease-in;
+    
+    &--active {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      order:2;
+      
+      img {
+        transform: scale(1);
+      }
+    }
+
+    &--next {
+      grid-column: 3/4;
+      grid-row: 1/2;
+order:3;
+      img {
+        transform: scale(0.8);
+      }
+    }
+    &--prev {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      order:1;
+      img {
+        transform: scale(0.8);
+      }
+    }
+
+    img {
+      display: block;
+      border-radius: 20px;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease-in;
+    }
+  }
+  .next,
+  .prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 0;
+    z-index: 1;
+    transition: width .4s ease;
+
+    svg {
+      color: white;
+      padding: 0.5rem;
+      width: 10rem;
+      height: 10rem;
+    }
+
+  }
+  .next {
+    right: 3%;
+  }
+  .prev {
+    left: 3%;
+  }
+
+  &:hover .next,
+  &:hover .prev {
+    width: 5rem;
+    background-color: rgba($clr-black, 0.4);
+  }
+  &:hover .prev:disabled, &:hover .next:disabled{
+    background-color: rgba($clr-black, 0.2);
+
+     svg {
+       color: rgba($clr-white, .4);
+     }
+  }
+}
+.carousel-indicators {
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+.carousel-indicators > * {
+  padding: 0.5em;
+  border: 2px solid var(--clr-white);
+  border-radius: 50%;
+  margin-right: $mx;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: var(--clr-rose-rouge);
+  }
+}
+
+.carousel-indicators > [aria-current="true"] {
+  border: 0;
+  width: 2rem;
+  padding: 0.5em;
+  border-radius: 20px;
+  background-color: var(--clr-rose-rouge);
+}

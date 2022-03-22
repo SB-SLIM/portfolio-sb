@@ -10,12 +10,12 @@ function MenuLeft() {
   return (
     <div className="navBar ">
       <div className="navBar__left">
-        <div className="logo-container">
+        <div className="logo-container mb-xl">
           <Logo />
         </div>
         <NavBar data={dataLeftMenu} isVertical />
       </div>
-      <div className="social flow flow--space-xl">
+      <div className="social flow flow--space-xl mb">
         <a
           href="https://www.linkedin.com/in/slim-bouchoucha/"
           target="_blank"

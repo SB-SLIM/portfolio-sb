@@ -10,13 +10,17 @@ function SideBar() {
 
   return (
     <div className={clsx("sideBar", sideIsOpen && "show")}>
-      <Button
-        styleProps="btn__icon"
-        handleClick={() => setSideIsOpen(!sideIsOpen)}
-      >
-        <span className="btn-close" />
-      </Button>
-      <NavBar data={dataSideBarMenu} />
+      <div className="sideBar__heading">
+        <Button
+          styleProps="btn__icon"
+          handleClick={() => setSideIsOpen(!sideIsOpen)}
+        >
+          <span className="btn-close" />
+        </Button>
+      </div>
+      <div className="sideBar__body">
+        <NavBar data={dataSideBarMenu} />
+      </div>
     </div>
   );
 }

@@ -1,34 +1,32 @@
 @use "../abstracts" as *;
 
-
 //Container
-.flex{
+.flex {
   display: flex;
-  gap: var(--gap, 1rem)
+  gap: var(--gap, 1rem);
 }
 
-.grid{
+.grid {
   display: grid;
-  gap: var(--gap, 1rem)
+  gap: var(--gap, 1rem);
 }
 
-.flow > *:where(:not(:first-child))  { 
-  margin-top: var(--flow-space, $my)
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, $my);
 }
 
 .flow--space-sm {
-    --flow-space: .75rem;
+  --flow-space: 0.75rem;
 }
 .flow--space-xl {
-    --flow-space: 2rem;
+  --flow-space: 2rem;
 }
 
-.container{
+.container {
   padding-inline: 2em;
   margin-inline: auto;
-  max-width: 128rem; 
+  max-width: 128rem;
 }
-
 
 /************/
 /*  -START- */
@@ -36,54 +34,54 @@
 /************/
 
 //margin-left
-.ml{
-margin-left: $mx;
+.ml {
+  margin-left: $mx;
 }
 
-.ml-sm{
-margin-left: $mx-sm;
+.ml-sm {
+  margin-left: $mx-sm;
 }
 
-.ml-xl{
-margin-left: $mx-xl;
+.ml-xl {
+  margin-left: $mx-xl;
 }
 
 //margin-right
-.mr{
-margin-right: $mx;
+.mr {
+  margin-right: $mx;
 }
 
-.mr-sm{
-margin-right: $mx-sm;
+.mr-sm {
+  margin-right: $mx-sm;
 }
 
-.mr-xl{
-margin-right: $mx-xl;
+.mr-xl {
+  margin-right: $mx-xl;
 }
 
 //margin-top
-.mt{
+.mt {
   margin-top: $my;
 }
 
-.mt-sm{
+.mt-sm {
   margin-top: $my-sm;
 }
 
-.mt-xl{
+.mt-xl {
   margin-top: $my-xl;
 }
 
 //margin-bottom
-.mb{
+.mb {
   margin-bottom: $my;
 }
 
-.mb-sm{
+.mb-sm {
   margin-bottom: $my-sm;
 }
 
-.mb-xl{
+.mb-xl {
   margin-bottom: $my-xl;
 }
 
@@ -92,6 +90,67 @@ margin-right: $mx-xl;
 /*  -END-   */
 /************/
 
+/************/
+/*  -START- */
+/*  Padding  */
+/************/
+
+//padding-left
+.pl {
+  padding-left: $mx;
+}
+
+.pl-sm {
+  padding-left: $mx-sm;
+}
+
+.pl-xl {
+  padding-left: $mx-xl;
+}
+
+//padding-right
+.pr {
+  padding-right: $mx;
+}
+
+.pr-sm {
+  padding-right: $mx-sm;
+}
+
+.pr-xl {
+  padding-right: $mx-xl;
+}
+
+//padding-top
+.pt {
+  padding-top: $my;
+}
+
+.pt-sm {
+  padding-top: $my-sm;
+}
+
+.pt-xl {
+  padding-top: $my-xl;
+}
+
+//margin-bottom
+.pb {
+  padding-bottom: $my;
+}
+
+.pb-sm {
+  padding-bottom: $my-sm;
+}
+
+.pb-xl {
+  padding-bottom: $my-xl;
+}
+
+/************/
+/*  Padding  */
+/*  -END-   */
+/************/
 
 .display-none {
   display: none !important;
@@ -130,11 +189,6 @@ margin-right: $mx-xl;
   background-color: $clr-white;
 }
 
-//padding container
-.p-2-3 {
-  padding: 2rem 3rem;
-}
-
 .hr-w-80 {
   width: 80%;
 }
@@ -158,9 +212,11 @@ margin-right: $mx-xl;
 
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
-  border-color: rgba($clr-primary, .5);
+  border-color: rgba($clr-primary, 0.5);
 }
 
 .underline-indicators > .active {
   border-color: rgba($clr-primary, 1);
 }
+
+

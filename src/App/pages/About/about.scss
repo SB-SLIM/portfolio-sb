@@ -6,7 +6,14 @@
   grid-template-rows:
     minmax(min-content, 1fr) minmax(min-content, 20vh)
     minmax(min-content, 1fr);
-    
+
+  @include media-down(sm) {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-rows:
+    repeat(2, minmax(min-content, 10vh)) repeat(2, minmax(min-content, 1fr));
+    justify-content: center;
+    align-items: center;
+  }
 
   .desc {
     display: flex;
@@ -15,13 +22,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include media-down(sm) {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+      }
   }
+
   .heading {
     &-hello {
       display: flex;
       grid-column: 2/-1;
       grid-row: 1/2;
       align-items: flex-end;
+
+      @include media-down(sm) {
+        grid-column: 1/-1;
+            align-self: end;
+        
+      }
     }
 
     &-im {
@@ -29,11 +48,22 @@
       grid-column: 2/-1;
       grid-row: 2/3;
       align-items: center;
+      @include media-down(sm) {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+            align-self: end;
+      }
     }
   }
 
   .btn-container {
     grid-column: 2/-1;
-    grid-row: 3/4;
+    
+
+    @include media-down(sm) {
+        grid-column: 1/-1;
+        justify-self: center;
+        align-self: flex-start;
+      }
   }
 }

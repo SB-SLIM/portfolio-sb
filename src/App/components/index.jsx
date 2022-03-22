@@ -5,5 +5,16 @@ import SideBar from "./sidebar";
 import Logo from "./Logo";
 import { MenuTop, MenuLeft } from "./menu";
 import Typography from "./Typography/Typography";
+import { Carousel } from "./Carousel";
 
-export { NavBar, Button, Toggle, SideBar, Logo, MenuTop, MenuLeft, Typography };
+export {
+  NavBar,
+  Button,
+  Toggle,
+  SideBar,
+  Logo,
+  MenuTop,
+  MenuLeft,
+  Typography,
+  Carousel,
+};

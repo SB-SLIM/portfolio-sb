@@ -4,7 +4,7 @@
   --flow-space: $my-xl;
   display: grid;
   grid-template-columns: minmax(min-content, 1fr);
-  grid-template-rows: 15vh 1fr;
+  grid-template-rows: 10rem 1fr;
   position: fixed;
   top: 0;
   right: 0;
@@ -18,7 +18,7 @@
    transition: 0.4s;
 
   &.show {
-    width: 30vw;
+    width: clamp(30rem, 30vw, 80%);
     transform: translateX(0);
     transition: 0.4s;
     
@@ -30,11 +30,15 @@
     }
   }
 
-  .btn {
+  &__heading {
+    padding: 2em;
     justify-self: end;
     align-self: center;
     &__icon > svg {
       font-size: 3rem;
     }
+  }
+  &__body{
+padding: 2em 0;
   }
 }
